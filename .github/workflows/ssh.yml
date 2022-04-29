@@ -27,7 +27,6 @@ jobs:
           username: ${{ secrets.KS4_USERNAME }}
           password: ${{ secrets.KS4_PASSWORD }}
           port: ${{ secrets.KS4_PORT }}
-          key: ${{ secrets.KS4_SSH_PRIVATE_ROOT }}
           script: whoami         
       - name: Run a one-line script
         run: echo Hello, world!
