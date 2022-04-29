@@ -23,7 +23,9 @@ jobs:
           username: ${{ secrets.KS4_USERNAME }}
           password: ${{ secrets.KS4_PASSWORD }}
           port: ${{ secrets.KS4_PORT }}
-          script: whoami         
+          script: |
+            whoami
+            echo $HOME  
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
