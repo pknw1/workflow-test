@@ -27,7 +27,7 @@ jobs:
             echo $HOME  
             pwd
             ls -l 
-      - run: 'echo "$CRT" > /etc/ssl/private/wildcard-pknw1.co.uk.pem && chmod 500 /etc/ssl/private/wildcard-pknw1.co.uk.pem'
+      - run: 'sudo echo "$CRT" > /etc/ssl/private/wildcard-pknw1.co.uk.pem && sudo chmod 500 /etc/ssl/private/wildcard-pknw1.co.uk.pem'
         shell: bash
         env:
            CRT: ${{secrets.CRT_PKNW1}}
