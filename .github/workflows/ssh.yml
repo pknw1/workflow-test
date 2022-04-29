@@ -39,4 +39,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Launch HAProxy ${{ steps.show-version.outputs.version }}
-        run: which haproxy
+        run: which haproxy && ls -l $GITHUB_WORKSPACE
