@@ -28,6 +28,7 @@ jobs:
           password: ${{ secrets.KS4_PASSWORD }}
           port: ${{ secrets.KS4_PORT }}
           script: whoami         
+          debug: true
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
