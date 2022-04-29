@@ -37,4 +37,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
+      - name: Launch HAProxy ${{ steps.show-version.outputs.version }}
+        run: haproxy -c -f .github/test.cfg
