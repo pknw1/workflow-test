@@ -32,6 +32,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.KS4_SSH_PRIVATE_ROOT }}  
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
