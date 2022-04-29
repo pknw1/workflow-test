@@ -1,3 +1,4 @@
+
 name: CI
 
 on:
@@ -8,27 +9,21 @@ on:
 
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.KS4_ADDRESS }}
           username: ${{ secrets.KS4_USERNAME }}
           password: ${{ secrets.KS4_PASSWORD }}
           port: ${{ secrets.KS4_PORT }}
           script: whoami         
-          debug: true
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
