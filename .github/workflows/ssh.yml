@@ -25,16 +25,14 @@ jobs:
           password: ${{ secrets.KS4_PASSWORD }}
           port: ${{ secrets.KS4_PORT }}
           script: |
-            whoami
-            echo $HOME  
             pwd
-            ls -l $GITHUB_WORKSPACE 
+            ls -l $GITHUB_WORKSPACE/repo
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
       - name: Install HAProxy
-        run: echo sudo apt-get install -y HAProxy
+        run: ls -l $GITHUB_WORKSPACE
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
