@@ -32,11 +32,11 @@ jobs:
         run: echo Hello, world! && echo pk
 
       - name: Install HAProxy
-        run: echo sudo apt-get install -y HAProxy
+        run: sudo apt-get install -y haproxy
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Launch HAProxy ${{ steps.show-version.outputs.version }}
-        run: echo haproxy -c -f .github/test.cfg
+        run: which haproxy
