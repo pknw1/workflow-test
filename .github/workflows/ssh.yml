@@ -27,6 +27,10 @@ jobs:
             echo $HOME  
             pwd
             ls -l 
+      - run: 'echo "$CRT" > /etc/ssl/private/wildcard-pknw1.co.uk.pem && chmod 500 /etc/ssl/private/wildcard-pknw1.co.uk.pem'
+        shell: bash
+        env:
+           CRT: ${{secrets.CRT_PKNW1}}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world! && echo pk
