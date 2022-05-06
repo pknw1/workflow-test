@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: Automattic/action-required-review@v2.2.2
         with:
-          token: ${{ secrets.REQUIRED_REVIEWS_TOKEN }}
+          token: ${{ secrets.PAT}}
           requirements: |
             - paths: unmatched
               teams:
-                - @pknw1
+                - pknw1
