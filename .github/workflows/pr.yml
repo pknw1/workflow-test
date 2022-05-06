@@ -20,4 +20,4 @@ jobs:
           requirements: |
             - paths: unmatched
               teams:
-                - pknw1
+                - @pknw1
