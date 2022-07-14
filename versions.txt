@@ -1,1 +1,2 @@
-azure/azure-cli/v1.2.3
+azure/azure-cli/azure-cli-2.38.0
+nodejs/node/v18.6.0
