@@ -1,2 +1,2 @@
-** GH LOG azure/azure-cli v1.2.3
+** GH LOG azure/azure-cli azure-cli-2.38.0
 ** DH TSK github/super-linter v1.2.3
